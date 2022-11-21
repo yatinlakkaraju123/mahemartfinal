@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+{% block content %} 
+{% for item in object_list %} 
+
+ 
+ 
+<div class="card" style="width: 18rem;">
+    <img src="{{ item.image.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.item_name}}</h5>
+      
+      <a href="{% url 'pages:product' item.id %}" class="btn btn-primary">View Item</a>
+    </div>
+  </div>
+  
+
+  
+{% empty %} 
+<p>Item not found</p>
+{% endfor %}
+{% endblock content %}

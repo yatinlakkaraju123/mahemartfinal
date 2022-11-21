@@ -1,0 +1,1 @@
+web: gunicorn mahemart.wsgi --log-file -

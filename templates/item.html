@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% block content %} 
+
+<div class="card" style="width: 18rem;">
+    <img src="https://source.unsplash.com/450x450/?stationary" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">STATIONARY</h5>
+      
+      <a href="{% url 'pages:stationary' %}" class="btn btn-primary">View</a>
+    </div>
+  </div>
+
+ 
+<a href = "{% url 'pages:groceries' %}">groceries</a>
+<a href = "{% url 'pages:snacks' %}">snacks</a>
+<a href = "{% url 'pages:fruits' %}">fruits</a>
+<a href = "{% url 'pages:homeessentials' %}">home essentials</a>
+<a href = "{% url 'pages:toiletries' %}">toiletries</a>
+<a href = "{% url 'pages:hygiene' %}">hygiene</a>
+<a href = "{% url 'pages:food' %}">food</a>
+<a href = "{% url 'pages:medicines' %}">medicines</a>
+{% endblock content %}
