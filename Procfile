@@ -1,1 +1,1 @@
-web: gunicorn mahemart.wsgi --log-file -
+web: python manage.py migrate && gunicorn locallibrary.wsgi

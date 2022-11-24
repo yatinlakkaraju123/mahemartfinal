@@ -1,28 +1,121 @@
 {% extends 'base.html' %}
-{% block content %} 
+{% block content %}
 <div>
-    
-      <a href = "{% url 'pages:item' %}">Item</a>
+
+  <a href="{% url 'pages:item' %}">Item</a>
 </div>
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://source.unsplash.com/1400x450/?clothes" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://source.unsplash.com/1400x450/?fruits" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://source.unsplash.com/1400x450/?items" class="d-block w-100" alt="...">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/1400x450/?clothes" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/1400x450/?fruits" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/1400x450/?items" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<div class="container text-center">
+  <h1>CATEGORIES</h1>
+  <div class="row row-cols-4">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="https://source.unsplash.com/450x450/?stationary" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">STATIONERY</h5>
+
+          <a href="{% url 'pages:stationary' %}" class="btn btn-primary">Go</a>
+        </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="https://source.unsplash.com/450x450/?groceries" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">GROCERIES</h5>
+
+          <a href="{% url 'pages:groceries' %}" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="https://source.unsplash.com/450x450/?fruits" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">FRUITS</h5>
+
+          <a href="{% url 'pages:fruits' %}" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="https://source.unsplash.com/450x450/?snacks" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">SNACKS</h5>
+
+          <a href="{% url 'pages:snacks' %}" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="https://source.unsplash.com/450x450/?essentials" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">HOME ESSENTIALS</h5>
+
+          <a href="{% url 'pages:homeessentials' %}" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="https://source.unsplash.com/450x450/?toiletries" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">TOILETRIES</h5>
+
+          <a href="{% url 'pages:toiletries' %}" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="https://source.unsplash.com/450x450/?medicines" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">MEDICINES</h5>
+
+          <a href="{% url 'pages:medicines' %}" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="https://source.unsplash.com/450x450/?food" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">FOOD</h5>
+
+          <a href="{% url 'pages:food' %}" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+
+
+
+
+
 {% endblock content %}
