@@ -223,7 +223,7 @@ class CheckoutView(View):
             return redirect("pages:order-summary")
         
 import razorpay
-client = razorpay.Client(auth=("rzp_test_4pTTJ8OGXPUjPp", "1PHP4az86CAmwIPpyMHxo9fi"))     
+client = razorpay.Client(auth=(settings.RAZOR_KEY_ID, settings.RAZOR_KEY_SECRET))     
 def payment(request):
     try:
         order = Order.objects.get(user=request.user, ordered=False)

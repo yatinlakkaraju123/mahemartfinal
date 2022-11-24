@@ -145,9 +145,9 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend" # new
 DEFAULT_FROM_EMAIL = "lakkaraju.yatin@learner.manipal.edu"
 EMAIL_HOST = "smtp.sendgrid.net"
 EMAIL_HOST_USER = "apikey"
-EMAIL_HOST_PASSWORD = "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"
+EMAIL_HOST_PASSWORD = env.str("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-RAZOR_KEY_ID = 'rzp_test_4pTTJ8OGXPUjPp'
-RAZOR_KEY_SECRET = '1PHP4az86CAmwIPpyMHxo9fi'
+RAZOR_KEY_ID = env.str("RAZOR_KEY_ID")
+RAZOR_KEY_SECRET = env.str("RAZOR_KEY_SECRET")
 
