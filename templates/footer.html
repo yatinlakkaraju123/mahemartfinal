@@ -4,17 +4,17 @@
             <div class="col-md-4 mb-3 mb-md-0">
                 <h6 class="text-uppercase mb-3">Customer services</h6>
                 <ul class="list-unstyled mb-0">
-                    <li><a class="footer-link" href="#">Help &amp; Contact Us</a></li>
-                    <li><a class="footer-link" href="#">Returns &amp; Refunds</a></li>
+                    <li><a class="footer-link" href="{%url "pages:contact" %}">Help &amp; Contact Us</a></li>
+                    <li><a class="footer-link" href="{%url "pages:return" %}">Returns &amp; Refunds</a></li>
                     <li><a class="footer-link" href="#">Online Stores</a></li>
-                    <li><a class="footer-link" href="#">Terms &amp; Conditions</a></li>
+                    <li><a class="footer-link" href="{%url "pages:terms" %}">Terms &amp; Conditions</a></li>
                 </ul>
             </div>
             <div class="col-md-4 mb-3 mb-md-0">
                 <h6 class="text-uppercase mb-3">Company</h6>
                 <ul class="list-unstyled mb-0">
-                    <li><a class="footer-link" href="#">What We Do</a></li>
-                    <li><a class="footer-link" href="#">Available Services</a></li>
+                    <li><a class="footer-link" href="{%url "pages:what" %}">What We Do</a></li>
+                    <li><a class="footer-link" href="{%url "pages:available" %}">Available Services</a></li>
                     <li><a class="footer-link" href="#">Latest Posts</a></li>
                     <li><a class="footer-link" href="{% url "pages:faq" %}">FAQs</a></li>
                 </ul>

@@ -2,7 +2,8 @@ from django.urls import path,include
 from .views import HomePageView,AboutPageView, TimelinePageView,ItemView,ProductView, remove_from_cart,add_to_cart,reduce_quantity_item,OrderSummaryView,CheckoutView
 from . import views
 from .views import StationaryView,GroceriesView,SnacksView,FruitsView,HomeEssentialsView,ToiletriesView,HygieneView,FoodView,MedicinesView
-from .views import payment, SearchResultsView,WarningPageView,FAQPageView
+from .views import payment, SearchResultsView,WarningPageView,FAQPageView,SellerPageView
+from .views import ContactView,AvailableView,ReturnView,TermsView,WhatView
 app_name = 'pages'
 
 urlpatterns = [
@@ -10,6 +11,12 @@ urlpatterns = [
     path('',HomePageView.as_view(),name='home'),
     path('about/',AboutPageView.as_view(),name = "about"),
     path('timeline/',TimelinePageView.as_view(),name="timeline"),
+    path('sell/',SellerPageView.as_view(),name="sell"),
+    path('contact/',ContactView.as_view(),name="contact"),
+    path('available/',AvailableView.as_view(),name="available"),
+    path('return/',ReturnView.as_view(),name="return"),
+    path('terms/',TermsView.as_view(),name="terms"),
+    path('what/',WhatView.as_view(),name="what"),
     path('items/',ItemView.as_view(),name="item"),
     path('stationary/',StationaryView.as_view(),name="stationary"),
     path('groceries/',GroceriesView.as_view(),name="groceries"),

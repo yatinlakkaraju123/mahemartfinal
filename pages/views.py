@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponse
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView,CreateView
 from django.contrib import messages    
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -34,8 +34,23 @@ def my_login_required(function):
     return wrapper
 class HomePageView(TemplateView):
     template_name = "home.html"
+class ContactView(TemplateView):
+    template_name = "contact.html"
+class AvailableView(TemplateView):
+    template_name = "available.html"
+class ReturnView(TemplateView):
+    template_name = "return.html"
+class TermsView(TemplateView):
+    template_name = "terms.html"
+class WhatView(TemplateView):
+    template_name = "what.html"
 class WarningPageView(TemplateView):
     template_name = "warning.html"
+class SellerPageView(CreateView):
+        model = Item
+        template_name = "sell.html"
+        fields = ["category","item_name","price","seller","description","image"]
+        
 class AboutPageView(TemplateView):
     template_name = "about.html"
 class TimelinePageView(TemplateView):
