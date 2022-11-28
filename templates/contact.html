@@ -1,0 +1,124 @@
+{% extends 'base.html' %}  
+{% load static %}
+{% block content %} 
+
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+
+
+
+<h2>"Meet The Team" Section</h2>
+<p>Meet the KICK-ASS team</p>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'Yatin-2 edited.jpg' %}" alt="Yatin" >
+      <div class="container">
+        <h2>Yatin Lakkaraju</h2>
+        <p class="title">Team leader</p>
+        <p>Handles the backend(django) and our team(lame joke).</p>
+        <p>lakkaraju.yatin@learner.manipal.edu</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'Pra edited.jpg' %}" alt="Pranav">
+      <div class="container">
+        <h2>Pranav Menon</h2>
+        <p class="title">Technical Head-1</p>
+        <p>Handles the css part and the about page.</p>
+        <p>pranav.menon@learner.manipal.edu</p>
+       
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'Akash edited.jpg' %}" alt="Akash">
+      <div class="container">
+        <h2>Akash Sarma</h2>
+        <p class="title">Technical Head-2</p>
+        <p>handling the js part and has made a sexy logo.</p>
+        <p>akash.sarma@learner.manipal.edu</p>
+        
+      </div>
+    </div>
+   
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'Chirag edited.jpg' %}" alt="Chirag" width ="400">
+      <div class="container">
+        <h2>Chirag Khandige</h2>
+        <p class="title">Technical Head-3</p>
+        <p>handling the html part and has made a login and sign-up page.</p>
+        <p>chirag.khandige@learner.manipal.edu</p>
+      
+      </div>
+    </div>
+  </div>
+</div>
+  
+</div>
+{% endblock content %}

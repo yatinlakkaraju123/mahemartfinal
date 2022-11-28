@@ -58,10 +58,7 @@
                        
                                     <!-- Link--><a class="nav-link " href="{% url 'pages:home' %}">Home</a>
                                 </li>
-                                <li class="nav-item">     
-                       
-                                    <!-- Link--><a class="nav-link " href="{% url 'pages:about' %}">About</a>
-                                </li>
+                                
             
                             </ul>  
                             <ul class="navbar-nav mr-auto"><li class="nav-item mx-auto ">
@@ -124,8 +121,9 @@
             {% block content %}
             {% endblock content %}
         </main>
+
+
         {% include 'footer.html' %}
-        </body>
-        </html>
+       
     
             
