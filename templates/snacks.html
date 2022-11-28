@@ -1,9 +1,10 @@
 {% extends 'base.html' %} 
 {% block content %} 
 {% for item in object_list %} 
-{% if item.category == 'SN' %}
+
 <div class="container text-center">
   <div class="row row-cols-4">
+    {% if item.category == 'SN' %}
       <div class="col">
         <div class="card" style="width: 18rem;">
             <img src="{{ item.image.url}}" class="card-img-top" alt="...">
@@ -13,8 +14,9 @@
               <p class="card-text">{{item.description}}.</p>
               <a href="{% url 'pages:product' item.id %}" class="btn btn-primary">View item</a>
             </div>
+            {% endif %}
           </div>
       </div>
-{% endif %}
+
 {% endfor %}
 {% endblock content %}
